@@ -26,12 +26,12 @@ Services:
  Deploy:
  1. Execute commands "docker-machine create node1 && docker-machine create node2 && docker-machine create node3";
  2. Connect to node1: docker-machine ssh node1
- 3. Execute command on node1: "docker swarm init --advertise-addr <your-IP>"
+ 3. Execute command on node1: "docker swarm init --advertise-addr [your-IP]"
  4. Execute command on node1 and past output to node2: "docker swarm join-token manager"
  5. Execute command on node1 and past output to node3: "docker swarm join-token manager"
  6. Execute command on node1: "docker stack deploy -c voting-app-stack.yml voteapp"
  
  Check here:
- <your-IP>:5000 - vote app
- <your-IP>:5001 - results of vote
- <your-IP>:8080 - nodes visualization
+ `[your-IP]:5000` - vote app
+ `[your-IP]:5001` - results of vote
+ `[your-IP]:8080` - nodes visualization
